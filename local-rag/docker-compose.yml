@@ -1,0 +1,86 @@
+services:
+
+  rag-postgres:
+    image: pgvector/pgvector:pg16
+    container_name: rag-postgres
+    environment:
+      POSTGRES_USER: raguser
+      POSTGRES_PASSWORD: ragpassword
+      POSTGRES_DB: ragdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U raguser -d ragdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  rag-api:
+    build:
+      context: ./backend
+    container_name: rag-api
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: rag-postgres
+      DB_PORT: 5432
+      DB_NAME: ragdb
+      DB_USER: raguser
+      DB_PASSWORD: ragpassword
+      OLLAMA_HOST: host.docker.internal
+      OLLAMA_PORT: 11434
+    depends_on:
+      rag-postgres:
+        condition: service_healthy
+
+  rag-ingestion:
+    build:
+      context: ./backend
+    container_name: rag-ingestion
+    environment:
+      DB_HOST: rag-postgres
+      DB_PORT: 5432
+      DB_NAME: ragdb
+      DB_USER: raguser
+      DB_PASSWORD: ragpassword
+      OLLAMA_HOST: host.docker.internal
+      OLLAMA_PORT: 11434
+    volumes:
+      - ./documents:/documents:ro
+      - ./extraction:/tmp/rag-extraction
+    depends_on:
+      rag-postgres:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+    command: ["python", "-m", "app.pipeline"]
+
+  opensearch:
+    image: opensearchproject/opensearch:2.19.1
+    container_name: rag-opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=${OPENSEARCH_INITIAL_ADMIN_PASSWORD}
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch_data:/usr/share/opensearch/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -fs http://localhost:9200 >/dev/null || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  postgres_data:
+  opensearch_data:

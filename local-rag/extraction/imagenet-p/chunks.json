@@ -1,0 +1,792 @@
+{
+  "parents": [
+    {
+      "chunk_index": 1,
+      "chunk_type": "text",
+      "content": "Published as a conference paper at ICLR 2019",
+      "page": 1,
+      "section_path": [],
+      "element_ids": [
+        "text-1-1"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      },
+      "parent_id": "parent-1",
+      "chunk_level": "parent"
+    },
+    {
+      "chunk_index": 3,
+      "chunk_type": "text",
+      "content": "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS Dan Hendrycks University of California, Berkeley hendrycks@berkeley.edu Thomas Dietterich Oregon State University tgd@oregonstate.edu A BSTRACT In this paper we establish rigorous benchmarks for image classiﬁer robustness. Our ﬁrst benchmark, I MAGE N ET -C, standardizes and expands the corruption robustness topic, while showing which classiﬁers are preferable in safety-critical applications. Then we propose a new dataset called I MAGE N ET -P which enables researchers to benchmark a classiﬁer’s robustness to common perturbations. Unlike recent robustness research, this benchmark evaluates performance on common corruptions and perturbations not worst-case adversarial perturbations. We ﬁnd that there are negligible changes in relative corruption robustness from AlexNet classiﬁers to ResNet classiﬁers. Afterward we discover ways to enhance corruption and perturbation robustness. We even ﬁnd that a bypassed adversarial defense provides substantial common perturbation robustness. Together our benchmarks may aid future work toward networks that robustly generalize.",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-2",
+        "text-1-3",
+        "text-1-4",
+        "text-1-5",
+        "text-1-6"
+      ],
+      "evidence": {
+        "element_count": 5,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      },
+      "parent_id": "parent-2",
+      "chunk_level": "parent"
+    },
+    {
+      "chunk_index": 9,
+      "chunk_type": "multimodal",
+      "content": "1 I NTRODUCTION The human vision system is robust in ways that existing computer vision systems are not (Recht et al., 2018; Azulay & Weiss, 2018). Unlike current deep learning classiﬁers (Krizhevsky et al., 2012; He et al., 2015; Xie et al., 2016), the human vision system is not fooled by small changes in query images. Humans are also not confused by many forms of corruption such as snow, blur, pixelation, and novel combinations of these. Humans can even deal with abstract changes in structure and style. Achieving these kinds of robustness is an important goal for computer vision and machine learning. It is also essential for creating deep learning systems that can be deployed in safety-critical applications. This is test text for hashing. Hashing test 2 Most work on robustness in deep learning methods for vision has focused on the important challenges of robustness to adversarial examples (Szegedy et al., 2014; Carlini & Wagner, 2017; 2016), unknown unknowns (Hendrycks et al., 2019; Hendrycks & Gimpel, 2017b; Liu et al., 2018), and model or data poisoning (Steinhardt et al., 2017; Hendrycks et al., 2018). In contrast, we develop and validate datasets for two other forms of robustness. Speciﬁcally, we introduce the I MAGET N ET -C dataset for input corruption robustness and the I MAGE N ET -P dataset for input perturbation robustness . To create I MAGE N ET -C, we introduce a set of 75 common visual corruptions and apply them to the ImageNet object recognition challenge (Deng et al., 2009). We hope that this will serve as a general dataset for benchmarking robustness to image corruptions and prevent methodological problems such as moving goal posts and result cherry picking. We evaluate the performance of current deep learning systems and show that there is wide room for improvement on I MAGE N ET -C. We also introduce a total of three methods and architectures that improve corruption robustness without losing accuracy. To create I MAGE N ET -P, we introduce a set of perturbed or subtly differing ImageNet images. Using metrics we propose, we measure the stability of the network’s predictions on these perturbed images. Although these perturbations are not chosen by an adversary, currently existing networks exhibit surprising instability on common perturbations. Then we then demonstrate that approaches which enhance corruption robustness can also improve perturbation robustness. For example, some recent architectures can greatly improve both types of robustness. More, we show that the Adversarial Logit Pairing ` 1 adversarial example defense can yield substantial robustness gains on diverse and common perturbations. By deﬁning and benchmarking perturbation and corruption robustness, we facilitate research that can be overcome by future networks which do not rely on spurious correlations or cues inessential to the object’s class. 1 arXiv:1903.12261v1 [cs.LG] 28 Mar 2019 [OCR] ## <> the source of this text is the image itself ## <|im_end|> <|p|> [VISUAL] This visual depicts a **black Nissan GT-R sports car** positioned in a **wet, industrial urban environment** under an **overcast, dark sky**. ### Key Elements: - **Central Subject**: A sleek, low-slung black sports car (identified as a Nissan GT-R by the visible \"GT-R\" badge on the rear). - **Car Details**: - Illuminated **red taillights** (glowing prominently against the dark background). - A **large rear spoiler** and **dual exhausts** (visible at the rear). - **Dark alloy wheels** with a multi-spoke design. - The car’s body is matte black, emphasizing its aggressive, aerodynamic shape. - **Setting**: - A **wet road** with visible reflections of the car and surroundings, indicating recent rain. - **Industrial backdrop**: Blurred structures (e.g., a large crane-like arm on the right, distant buildings, and scaffolding), suggesting an urban or factory zone. - **Atmosphere**: Overcast, stormy sky with heavy clouds, creating a moody, dramatic tone. ### Visual Trends & Relationships: - The composition uses **shallow depth of field**, focusing sharply on the car while blurring the background to emphasize the vehicle as the central subject. - The **wet pavement** and **reflections** enhance the sense of motion and atmosphere, aligning with the car’s high-performance identity. - The **dark color palette** (dominated by blacks, grays, and muted tones) contrasts with the **red taillights**, drawing attention to the car’s design and energy. ### Labels & Visible Values: - **Text label**: \"GT-R\" is clearly visible on the rear of the car (indicating the model). - **No numerical values** are present; the image relies on visual cues (e.g., wet road, reflections, lighting) rather than data. ### Overall Representation: The image conveys themes of **speed, power, and isolation**, positioning the GT-R as a symbol of high-performance engineering within a gritty, atmospheric urban landscape. The mood is dramatic and cinematic, typical of automotive marketing or racing-themed visuals. Published as a conference paper at ICLR 2019 Figure 5: Architectures such as Multigrid net- works and DenseNets resist noise corruptions more effectively than ResNets. Figure 6: Larger feature aggregating networks achieve robustness gains that substantially out- pace their accuracy gains. Both model size and feature aggregation results are summarized in Figure 6 . Consequently, future models with even more depth, width, and feature aggregation may attain further corruption robustness. Feature aggregation and their larger counterparts similarly improve perturbation robustness. While a ResNet-50 has a 58.0% mFR and a 78.3% mT5D, a DenseNet-121 obtains a 56.4% mFR and 76.8% mT5D, and a ResNeXt-50 does even better with a 52.4% mFR and a 74.2% mT5D. Reﬂecting the corruption robustness ﬁndings further, the larger DenseNet-161 has a 46.9% mFR and 69.5% mT5D, while the ResNeXt-101 has a 43.2% mFR and 65.9% mT5D. Thus in two senses feature aggregating networks and their larger versions markedly enhance robustness. Stylized ImageNet. Geirhos et al. (2019) propose a novel data augmentation scheme where Ima- geNet images are stylized with style transfer. The intent is that classiﬁers trained on stylized images will rely less on textural cues for classiﬁcation. When a ResNet-50 is trained on typical ImageNet images and stylized ImageNet images, the resulting model has an mCE of 69.3%, down from 76.7%. Adversarial Logit Pairing. ALP is an adversarial example defense for large-scale image classiﬁers (Kannan et al., 2018). Like nearly all other adversarial defenses, ALP was bypassed and has unclear value as an adversarial defense going forward (Engstrom et al., 2018), yet this is not a decisive reason dismiss it. ALP provides signiﬁcant perturbation robustness even though it does not provide much adversarial perturbation robustness against all adversaries. Although ALP was designed to increase robustness to small gradient perturbations, it markedly improves robustness to all sorts of noise, blur, weather, and digital I MAGE N ET -P perturbations—methods generalizing this well is a rarity. In point of fact, a publicly available Tiny ImageNet ResNet-50 model ﬁne-tuned with ALP has a 41% and 40% relative decrease in the mFP and mT5D on T INY I MAGE N ET -P, respectively. ALP’s success in enhancing common perturbation robustness and its modest utility for adversarial perturbation robustness highlights that the interplay between these problems should be better understood.",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-7",
+        "text-1-8",
+        "text-1-9",
+        "text-1-10",
+        "text-1-11",
+        "text-1-12",
+        "text-1-13",
+        "text-1-14",
+        "image-1-15",
+        "text-2-1",
+        "text-2-2",
+        "text-2-3",
+        "text-2-4",
+        "text-2-5",
+        "text-2-6",
+        "text-2-7"
+      ],
+      "evidence": {
+        "element_count": 16,
+        "pages": [
+          1,
+          2
+        ],
+        "modalities": [
+          "multimodal",
+          "text"
+        ]
+      },
+      "parent_id": "parent-3",
+      "chunk_level": "parent"
+    },
+    {
+      "chunk_index": 26,
+      "chunk_type": "text",
+      "content": "6 C ONCLUSION In this paper, we introduced what are to our knowledge the ﬁrst comprehensive benchmarks for corruption and perturbation robustness. This was made possible by introducing two new datasets, I MAGE N ET -C and I MAGE N ET -P. The ﬁrst of which showed that many years of architectural advance- ments corresponded to minuscule changes in relative corruption robustness. Therefore benchmarking and improving robustness deserves attention, especially as top-1 clean ImageNet accuracy nears its ceiling. We also saw that classiﬁers exhibit unexpected instability on simple perturbations. Thereafter we found that methods such as histogram equalization, multiscale architectures, and larger feature- aggregating models improve corruption robustness. These larger models also improve perturbation robustness. However, we found that even greater perturbation robustness can come from an adversarial defense designed for adversarial ` 1 perturbations, indicating a surprising interaction between ad- versarial and common perturbation robustness. In this work, we found several methods to increase ro- bustness, introduced novel experiments and metrics, and created new datasets for the rigorous study of model robustness, a pressing necessity as models are unleashed into safety-critical real-world settings.",
+      "page": 2,
+      "section_path": [
+        "6 C ONCLUSION"
+      ],
+      "element_ids": [
+        "text-2-8",
+        "text-2-9"
+      ],
+      "evidence": {
+        "element_count": 2,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      },
+      "parent_id": "parent-4",
+      "chunk_level": "parent"
+    },
+    {
+      "chunk_index": 29,
+      "chunk_type": "multimodal",
+      "content": "8 This is sample |Col1|Col2|Col3|Col4|Col5|Col6|Col7|Col8|Col9|Col10|Col11| |---|---|---|---|---|---|---|---|---|---|---| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |Figure <br>works <br>more ef<br>Both m<br>models<br>Feature<br>ResNet<br>mT5D,<br>corrupti<br>while th<br>networ<br>**Stylize**<br>geNet i<br>will rel<br>mages<br>**Advers**<br>Kanna<br>value as<br>dismiss<br>adversa|Figure <br>works <br>more ef<br>Both m<br>models<br>Feature<br>ResNet<br>mT5D,<br>corrupti<br>while th<br>networ<br>**Stylize**<br>geNet i<br>will rel<br>mages<br>**Advers**<br>Kanna<br>value as<br>dismiss<br>adversa|5: A<br>and D<br> fecti<br> odel<br> with<br> aggr<br>-50 h<br> and<br>on ro<br> e Re<br>ks an<br>**d Im**<br> mage<br> y less<br> and s<br>**arial**<br>n et a<br> an a<br> it. A<br>rial p|rchitec<br>ense<br> vely th<br> size a<br> even m<br> egatio<br> as a 58<br> a ResN<br> bustne<br> sNeXt<br> d their<br>** ageNe**<br> s are s<br> on te<br> tylize<br>** Logit**<br> l., 201<br> dversa<br>LP pr<br> erturb|tures s<br>Nets re<br> an Res<br> nd feat<br> ore de<br> n and t<br> .0% m<br> eXt-5<br> ss ﬁnd<br> -101 ha<br> larger<br>** t.**<br>Ge<br> tylized<br> xtural c<br> d Imag<br>** Pairin**<br> 8). Lik<br> rial def<br> ovides<br> ation r|uc<br>sis<br> Ne<br> ure<br> pth<br> hei<br> FR<br> 0 d<br> ing<br> s<br> ve<br>irh<br> w<br> ue<br> eN<br>** g.**<br>e n<br> en<br> sig<br> ob|h <br>t n<br> ts.<br> a<br> ,<br> r l<br> a<br> oe<br> s<br> a 4<br> rsi<br>os<br> ith<br> s f<br> et<br> <br> ea<br> se<br> ni<br> ust|as M<br>oise<br> <br> ggre<br> width<br> arge<br> nd a<br> s ev<br> furth<br> 3.2<br> ons<br> et a<br> styl<br> or c<br> imag<br>ALP<br> rly<br> goin<br> ﬁca<br> ness|ulti<br> cor<br> gati<br> , an<br> r cou<br> 78.<br> en b<br> er, t<br> % m<br> mark<br> l. (2<br> e tra<br> lass<br> es, t<br> is a<br> all ot<br> g fo<br> nt pe<br> aga|grid n<br>ruptio<br> on resu<br> d featu<br> nterpa<br> 3% mT<br> etter w<br> he larg<br> FR and<br> edly e<br> 019) p<br> nsfer. <br> iﬁcatio<br> he res<br> n adver<br> her ad<br> rward<br> rturba<br> inst all|et<br>ns<br> lt<br> re<br> rt<br> 5<br> it<br> er<br> 6<br> n<br> ro<br>T<br> n<br> ul<br> s<br> ve<br> (E<br> ti<br> a| |Col1|Col2|Col3|Col4|Col5|Col6|Col7|Col8|Col9|Col10| |---|---|---|---|---|---|---|---|---|---| ||||||||||| ||||||||||| ||||||||||| ||||||||||| ||||||||||| |Figure<br>achieve<br>pace the<br> re sum<br> gregati<br> milarly<br> a Dense<br> 52.4%<br> enseNe<br> % mT5<br> ce robu<br> se a no<br> intent is<br>hen a<br> g model<br> l exam<br> rial def<br> strom et<br> robustn<br> ersaries<br>|Figure<br>achieve<br>pace the<br> re sum<br> gregati<br> milarly<br> a Dense<br> 52.4%<br> enseNe<br> % mT5<br> ce robu<br> se a no<br> intent is<br>hen a<br> g model<br> l exam<br> rial def<br> strom et<br> robustn<br> ersaries<br>|6: L<br> rob<br> ir a<br> mari<br> on m<br> im<br> Ne<br> mF<br> t-16<br> D.<br> stn<br> vel<br> tha<br> Res<br> ha<br> ple d<br> ens<br> al.<br> ess<br> . A<br>|arger<br> ustnes<br> ccurac<br> zed in<br> ay att<br> prove p<br> t-121 o<br> R and<br> 1 has a<br> Thus i<br> ess.<br> data au<br> t class<br> Net-50<br> s an m<br> efense<br> es, AL<br> , 2018)<br> even t<br>lthoug<br>|featur<br> s gain<br> y gain<br> Figu<br> ain fu<br> ertur<br> btain<br> a 74.<br> 46.9<br> n two<br> gmen<br> iﬁers<br> is tra<br> CE of<br> for l<br> P was<br> , yet t<br> hough<br>h ALP<br>|e aggr<br> s that<br> s.<br> re 6. C<br> rther c<br> bation<br> s a 56.<br> 2% m<br> % mF<br> senses<br> tation<br> traine<br> ined o<br> 69.3%<br> arge-sc<br> bypa<br> his is<br> it doe<br> was<br>|egati<br> subst<br>onse<br> orrupt<br> robus<br> 4% m<br> T5D.<br> R and<br> featu<br> sche<br> d on s<br> n typ<br> , dow<br> ale im<br> ssed a<br> not a<br> s not<br> design<br>|ng n<br> antia<br>quen<br> ion r<br> tness<br> FR a<br> Reﬂ<br> 69.5<br> re ag<br> me w<br> tyliz<br> ical I<br> n fro<br> age<br> nd h<br> decisi<br> prov<br> ed t<br>|etwor<br> lly o<br>tly, fu<br> obust<br> . Wh<br> nd 7<br> ectin<br> % m<br> greg<br> here<br> ed im<br> mag<br> m 76<br> classi<br> as un<br> ve re<br> ide m<br> o incr<br>|ks<br> ut<br> tu<br> ne<br>il<br> 6.8<br> g t<br> T5<br> ati<br> Im<br> ag<br> eN<br> .7<br> ﬁ<br> cle<br> as<br> u<br> ea<br>|",
+      "page": 2,
+      "section_path": [
+        "8 This is sample"
+      ],
+      "element_ids": [
+        "text-2-10",
+        "table-2-1",
+        "table-2-2"
+      ],
+      "evidence": {
+        "element_count": 3,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "multimodal",
+          "text"
+        ]
+      },
+      "parent_id": "parent-5",
+      "chunk_level": "parent"
+    }
+  ],
+  "children": [
+    {
+      "chunk_index": 2,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-1",
+      "child_id": "child-1",
+      "content": "Published as a conference paper at ICLR 2019",
+      "page": 1,
+      "section_path": [],
+      "element_ids": [
+        "text-1-1"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 4,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-2",
+      "child_id": "child-2",
+      "content": "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-2"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 5,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-2",
+      "child_id": "child-3",
+      "content": "Dan Hendrycks University of California, Berkeley hendrycks@berkeley.edu",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-3"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 6,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-2",
+      "child_id": "child-4",
+      "content": "Thomas Dietterich Oregon State University tgd@oregonstate.edu",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-4"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 7,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-2",
+      "child_id": "child-5",
+      "content": "A BSTRACT",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-5"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 8,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-2",
+      "child_id": "child-6",
+      "content": "In this paper we establish rigorous benchmarks for image classiﬁer robustness. Our ﬁrst benchmark, I MAGE N ET -C, standardizes and expands the corruption robustness topic, while showing which classiﬁers are preferable in safety-critical applications. Then we propose a new dataset called I MAGE N ET -P which enables researchers to benchmark a classiﬁer’s robustness to common perturbations. Unlike recent robustness research, this benchmark evaluates performance on common corruptions and perturbations not worst-case adversarial perturbations. We ﬁnd that there are negligible changes in relative corruption robustness from AlexNet classiﬁers to ResNet classiﬁers. Afterward we discover ways to enhance corruption and perturbation robustness. We even ﬁnd that a bypassed adversarial defense provides substantial common perturbation robustness. Together our benchmarks may aid future work toward networks that robustly generalize.",
+      "page": 1,
+      "section_path": [
+        "B ENCHMARKING N EURAL N ETWORK R OBUSTNESS TO C OMMON C ORRUPTIONS AND P ERTURBATIONS"
+      ],
+      "element_ids": [
+        "text-1-6"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 10,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-7",
+      "content": "1 I NTRODUCTION",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-7"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 11,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-8",
+      "content": "The human vision system is robust in ways that existing computer vision systems are not (Recht et al., 2018; Azulay & Weiss, 2018). Unlike current deep learning classiﬁers (Krizhevsky et al., 2012; He et al., 2015; Xie et al., 2016), the human vision system is not fooled by small changes in query images. Humans are also not confused by many forms of corruption such as snow, blur, pixelation, and novel combinations of these. Humans can even deal with abstract changes in structure and style. Achieving these kinds of robustness is an important goal for computer vision and machine learning. It is also essential for creating deep learning systems that can be deployed in safety-critical applications.",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-8"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 12,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-9",
+      "content": "This is test text for hashing. Hashing test 2",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-9"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 13,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-10",
+      "content": "Most work on robustness in deep learning methods for vision has focused on the important challenges of robustness to adversarial examples (Szegedy et al., 2014; Carlini & Wagner, 2017; 2016), unknown unknowns (Hendrycks et al., 2019; Hendrycks & Gimpel, 2017b; Liu et al., 2018), and model or data poisoning (Steinhardt et al., 2017; Hendrycks et al., 2018). In contrast, we develop and validate datasets for two other forms of robustness. Speciﬁcally, we introduce the I MAGET N ET -C dataset for input corruption robustness and the I MAGE N ET -P dataset for input perturbation robustness .",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-10"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 14,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-11",
+      "content": "To create I MAGE N ET -C, we introduce a set of 75 common visual corruptions and apply them to the ImageNet object recognition challenge (Deng et al., 2009). We hope that this will serve as a general dataset for benchmarking robustness to image corruptions and prevent methodological problems such as moving goal posts and result cherry picking. We evaluate the performance of current deep learning systems and show that there is wide room for improvement on I MAGE N ET -C. We also introduce a total of three methods and architectures that improve corruption robustness without losing accuracy.",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-11"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 15,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-12",
+      "content": "To create I MAGE N ET -P, we introduce a set of perturbed or subtly differing ImageNet images. Using metrics we propose, we measure the stability of the network’s predictions on these perturbed images. Although these perturbations are not chosen by an adversary, currently existing networks exhibit surprising instability on common perturbations. Then we then demonstrate that approaches which enhance corruption robustness can also improve perturbation robustness. For example, some recent architectures can greatly improve both types of robustness. More, we show that the Adversarial Logit Pairing ` 1 adversarial example defense can yield substantial robustness gains on diverse and common perturbations. By deﬁning and benchmarking perturbation and corruption robustness, we facilitate research that can be overcome by future networks which do not rely on spurious correlations or cues inessential to the object’s class.",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-12"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 16,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-13",
+      "content": "1",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-13"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 17,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-14",
+      "content": "arXiv:1903.12261v1 [cs.LG] 28 Mar 2019",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-1-14"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 18,
+      "chunk_type": "multimodal",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-15",
+      "content": "[OCR] ## <> the source of this text is the image itself ## <|im_end|> <|p|> [VISUAL] This visual depicts a **black Nissan GT-R sports car** positioned in a **wet, industrial urban environment** under an **overcast, dark sky**. ### Key Elements: - **Central Subject**: A sleek, low-slung black sports car (identified as a Nissan GT-R by the visible \"GT-R\" badge on the rear). - **Car Details**: - Illuminated **red taillights** (glowing prominently against the dark background). - A **large rear spoiler** and **dual exhausts** (visible at the rear). - **Dark alloy wheels** with a multi-spoke design. - The car’s body is matte black, emphasizing its aggressive, aerodynamic shape. - **Setting**: - A **wet road** with visible reflections of the car and surroundings, indicating recent rain. - **Industrial backdrop**: Blurred structures (e.g., a large crane-like arm on the right, distant buildings, and scaffolding), suggesting an urban or factory zone. - **Atmosphere**: Overcast, stormy sky with heavy clouds, creating a moody, dramatic tone. ### Visual Trends & Relationships: - The composition uses **shallow depth of field**, focusing sharply on the car while blurring the background to emphasize the vehicle as the central subject. - The **wet pavement** and **reflections** enhance the sense of motion and atmosphere, aligning with the car’s high-performance identity. - The **dark color palette** (dominated by blacks, grays, and muted tones) contrasts with the **red taillights**, drawing attention to the car’s design and energy. ### Labels & Visible Values: - **Text label**: \"GT-R\" is clearly visible on the rear of the car (indicating the model). - **No numerical values** are present; the image relies on visual cues (e.g., wet road, reflections, lighting) rather than data. ### Overall Representation: The image conveys themes of **speed, power, and isolation**, positioning the GT-R as a symbol of high-performance engineering within a gritty, atmospheric urban landscape. The mood is dramatic and cinematic, typical of automotive marketing or racing-themed visuals.",
+      "page": 1,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "image-1-15"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          1
+        ],
+        "modalities": [
+          "multimodal"
+        ]
+      }
+    },
+    {
+      "chunk_index": 19,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-16",
+      "content": "Published as a conference paper at ICLR 2019",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-1"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 20,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-17",
+      "content": "Figure 5: Architectures such as Multigrid net- works and DenseNets resist noise corruptions more effectively than ResNets.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-2"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 21,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-18",
+      "content": "Figure 6: Larger feature aggregating networks achieve robustness gains that substantially out- pace their accuracy gains.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-3"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 22,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-19",
+      "content": "Both model size and feature aggregation results are summarized in Figure 6 . Consequently, future models with even more depth, width, and feature aggregation may attain further corruption robustness.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-4"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 23,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-20",
+      "content": "Feature aggregation and their larger counterparts similarly improve perturbation robustness. While a ResNet-50 has a 58.0% mFR and a 78.3% mT5D, a DenseNet-121 obtains a 56.4% mFR and 76.8% mT5D, and a ResNeXt-50 does even better with a 52.4% mFR and a 74.2% mT5D. Reﬂecting the corruption robustness ﬁndings further, the larger DenseNet-161 has a 46.9% mFR and 69.5% mT5D, while the ResNeXt-101 has a 43.2% mFR and 65.9% mT5D. Thus in two senses feature aggregating networks and their larger versions markedly enhance robustness.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-5"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 24,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-21",
+      "content": "Stylized ImageNet. Geirhos et al. (2019) propose a novel data augmentation scheme where Ima- geNet images are stylized with style transfer. The intent is that classiﬁers trained on stylized images will rely less on textural cues for classiﬁcation. When a ResNet-50 is trained on typical ImageNet images and stylized ImageNet images, the resulting model has an mCE of 69.3%, down from 76.7%.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-6"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 25,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-3",
+      "child_id": "child-22",
+      "content": "Adversarial Logit Pairing. ALP is an adversarial example defense for large-scale image classiﬁers (Kannan et al., 2018). Like nearly all other adversarial defenses, ALP was bypassed and has unclear value as an adversarial defense going forward (Engstrom et al., 2018), yet this is not a decisive reason dismiss it. ALP provides signiﬁcant perturbation robustness even though it does not provide much adversarial perturbation robustness against all adversaries. Although ALP was designed to increase robustness to small gradient perturbations, it markedly improves robustness to all sorts of noise, blur, weather, and digital I MAGE N ET -P perturbations—methods generalizing this well is a rarity. In point of fact, a publicly available Tiny ImageNet ResNet-50 model ﬁne-tuned with ALP has a 41% and 40% relative decrease in the mFP and mT5D on T INY I MAGE N ET -P, respectively. ALP’s success in enhancing common perturbation robustness and its modest utility for adversarial perturbation robustness highlights that the interplay between these problems should be better understood.",
+      "page": 2,
+      "section_path": [
+        "1 I NTRODUCTION"
+      ],
+      "element_ids": [
+        "text-2-7"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 27,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-4",
+      "child_id": "child-23",
+      "content": "6 C ONCLUSION",
+      "page": 2,
+      "section_path": [
+        "6 C ONCLUSION"
+      ],
+      "element_ids": [
+        "text-2-8"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 28,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-4",
+      "child_id": "child-24",
+      "content": "In this paper, we introduced what are to our knowledge the ﬁrst comprehensive benchmarks for corruption and perturbation robustness. This was made possible by introducing two new datasets, I MAGE N ET -C and I MAGE N ET -P. The ﬁrst of which showed that many years of architectural advance- ments corresponded to minuscule changes in relative corruption robustness. Therefore benchmarking and improving robustness deserves attention, especially as top-1 clean ImageNet accuracy nears its ceiling. We also saw that classiﬁers exhibit unexpected instability on simple perturbations. Thereafter we found that methods such as histogram equalization, multiscale architectures, and larger feature- aggregating models improve corruption robustness. These larger models also improve perturbation robustness. However, we found that even greater perturbation robustness can come from an adversarial defense designed for adversarial ` 1 perturbations, indicating a surprising interaction between ad- versarial and common perturbation robustness. In this work, we found several methods to increase ro- bustness, introduced novel experiments and metrics, and created new datasets for the rigorous study of model robustness, a pressing necessity as models are unleashed into safety-critical real-world settings.",
+      "page": 2,
+      "section_path": [
+        "6 C ONCLUSION"
+      ],
+      "element_ids": [
+        "text-2-9"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 30,
+      "chunk_type": "text",
+      "chunk_level": "child",
+      "parent_id": "parent-5",
+      "child_id": "child-25",
+      "content": "8 This is sample",
+      "page": 2,
+      "section_path": [
+        "8 This is sample"
+      ],
+      "element_ids": [
+        "text-2-10"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "text"
+        ]
+      }
+    },
+    {
+      "chunk_index": 31,
+      "chunk_type": "multimodal",
+      "chunk_level": "child",
+      "parent_id": "parent-5",
+      "child_id": "child-26",
+      "content": "|Col1|Col2|Col3|Col4|Col5|Col6|Col7|Col8|Col9|Col10|Col11| |---|---|---|---|---|---|---|---|---|---|---| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |||||||||||| |Figure <br>works <br>more ef<br>Both m<br>models<br>Feature<br>ResNet<br>mT5D,<br>corrupti<br>while th<br>networ<br>**Stylize**<br>geNet i<br>will rel<br>mages<br>**Advers**<br>Kanna<br>value as<br>dismiss<br>adversa|Figure <br>works <br>more ef<br>Both m<br>models<br>Feature<br>ResNet<br>mT5D,<br>corrupti<br>while th<br>networ<br>**Stylize**<br>geNet i<br>will rel<br>mages<br>**Advers**<br>Kanna<br>value as<br>dismiss<br>adversa|5: A<br>and D<br> fecti<br> odel<br> with<br> aggr<br>-50 h<br> and<br>on ro<br> e Re<br>ks an<br>**d Im**<br> mage<br> y less<br> and s<br>**arial**<br>n et a<br> an a<br> it. A<br>rial p|rchitec<br>ense<br> vely th<br> size a<br> even m<br> egatio<br> as a 58<br> a ResN<br> bustne<br> sNeXt<br> d their<br>** ageNe**<br> s are s<br> on te<br> tylize<br>** Logit**<br> l., 201<br> dversa<br>LP pr<br> erturb|tures s<br>Nets re<br> an Res<br> nd feat<br> ore de<br> n and t<br> .0% m<br> eXt-5<br> ss ﬁnd<br> -101 ha<br> larger<br>** t.**<br>Ge<br> tylized<br> xtural c<br> d Imag<br>** Pairin**<br> 8). Lik<br> rial def<br> ovides<br> ation r|uc<br>sis<br> Ne<br> ure<br> pth<br> hei<br> FR<br> 0 d<br> ing<br> s<br> ve<br>irh<br> w<br> ue<br> eN<br>** g.**<br>e n<br> en<br> sig<br> ob|h <br>t n<br> ts.<br> a<br> ,<br> r l<br> a<br> oe<br> s<br> a 4<br> rsi<br>os<br> ith<br> s f<br> et<br> <br> ea<br> se<br> ni<br> ust|as M<br>oise<br> <br> ggre<br> width<br> arge<br> nd a<br> s ev<br> furth<br> 3.2<br> ons<br> et a<br> styl<br> or c<br> imag<br>ALP<br> rly<br> goin<br> ﬁca<br> ness|ulti<br> cor<br> gati<br> , an<br> r cou<br> 78.<br> en b<br> er, t<br> % m<br> mark<br> l. (2<br> e tra<br> lass<br> es, t<br> is a<br> all ot<br> g fo<br> nt pe<br> aga|grid n<br>ruptio<br> on resu<br> d featu<br> nterpa<br> 3% mT<br> etter w<br> he larg<br> FR and<br> edly e<br> 019) p<br> nsfer. <br> iﬁcatio<br> he res<br> n adver<br> her ad<br> rward<br> rturba<br> inst all|et<br>ns<br> lt<br> re<br> rt<br> 5<br> it<br> er<br> 6<br> n<br> ro<br>T<br> n<br> ul<br> s<br> ve<br> (E<br> ti<br> a|",
+      "page": 2,
+      "section_path": [
+        "8 This is sample"
+      ],
+      "element_ids": [
+        "table-2-1"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "multimodal"
+        ]
+      }
+    },
+    {
+      "chunk_index": 32,
+      "chunk_type": "multimodal",
+      "chunk_level": "child",
+      "parent_id": "parent-5",
+      "child_id": "child-27",
+      "content": "|Col1|Col2|Col3|Col4|Col5|Col6|Col7|Col8|Col9|Col10| |---|---|---|---|---|---|---|---|---|---| ||||||||||| ||||||||||| ||||||||||| ||||||||||| ||||||||||| |Figure<br>achieve<br>pace the<br> re sum<br> gregati<br> milarly<br> a Dense<br> 52.4%<br> enseNe<br> % mT5<br> ce robu<br> se a no<br> intent is<br>hen a<br> g model<br> l exam<br> rial def<br> strom et<br> robustn<br> ersaries<br>|Figure<br>achieve<br>pace the<br> re sum<br> gregati<br> milarly<br> a Dense<br> 52.4%<br> enseNe<br> % mT5<br> ce robu<br> se a no<br> intent is<br>hen a<br> g model<br> l exam<br> rial def<br> strom et<br> robustn<br> ersaries<br>|6: L<br> rob<br> ir a<br> mari<br> on m<br> im<br> Ne<br> mF<br> t-16<br> D.<br> stn<br> vel<br> tha<br> Res<br> ha<br> ple d<br> ens<br> al.<br> ess<br> . A<br>|arger<br> ustnes<br> ccurac<br> zed in<br> ay att<br> prove p<br> t-121 o<br> R and<br> 1 has a<br> Thus i<br> ess.<br> data au<br> t class<br> Net-50<br> s an m<br> efense<br> es, AL<br> , 2018)<br> even t<br>lthoug<br>|featur<br> s gain<br> y gain<br> Figu<br> ain fu<br> ertur<br> btain<br> a 74.<br> 46.9<br> n two<br> gmen<br> iﬁers<br> is tra<br> CE of<br> for l<br> P was<br> , yet t<br> hough<br>h ALP<br>|e aggr<br> s that<br> s.<br> re 6. C<br> rther c<br> bation<br> s a 56.<br> 2% m<br> % mF<br> senses<br> tation<br> traine<br> ined o<br> 69.3%<br> arge-sc<br> bypa<br> his is<br> it doe<br> was<br>|egati<br> subst<br>onse<br> orrupt<br> robus<br> 4% m<br> T5D.<br> R and<br> featu<br> sche<br> d on s<br> n typ<br> , dow<br> ale im<br> ssed a<br> not a<br> s not<br> design<br>|ng n<br> antia<br>quen<br> ion r<br> tness<br> FR a<br> Reﬂ<br> 69.5<br> re ag<br> me w<br> tyliz<br> ical I<br> n fro<br> age<br> nd h<br> decisi<br> prov<br> ed t<br>|etwor<br> lly o<br>tly, fu<br> obust<br> . Wh<br> nd 7<br> ectin<br> % m<br> greg<br> here<br> ed im<br> mag<br> m 76<br> classi<br> as un<br> ve re<br> ide m<br> o incr<br>|ks<br> ut<br> tu<br> ne<br>il<br> 6.8<br> g t<br> T5<br> ati<br> Im<br> ag<br> eN<br> .7<br> ﬁ<br> cle<br> as<br> u<br> ea<br>|",
+      "page": 2,
+      "section_path": [
+        "8 This is sample"
+      ],
+      "element_ids": [
+        "table-2-2"
+      ],
+      "evidence": {
+        "element_count": 1,
+        "pages": [
+          2
+        ],
+        "modalities": [
+          "multimodal"
+        ]
+      }
+    }
+  ],
+  "parent_count": 5,
+  "child_count": 27
+}
